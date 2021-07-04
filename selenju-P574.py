@@ -38,7 +38,8 @@ class WizzairRegistration(unittest.TestCase):
     # Metody testowe - zaczynają się od słowa "test"
     def testInvalidEmail(self):
         print("Prawdziwy test")
-        # Tutaj będziemy wykonywać KROKI
+
+    # Tutaj będziemy wykonywać KROKI przypadku testowego nr 001 Rejestracja nowego użytkownika używając niepoprawnego adresu e-mail
 
         # KROK 1 : Kliknij "Zaloguj"
         driver = self.driver
@@ -190,8 +191,8 @@ class WizzairRegistration(unittest.TestCase):
 
         # !!!!!!!!!!!!!!!! Sprawdż, czy widoczny jest tylko jeden z nich
         # Czy lista visible_errors zawiera wyłacznie jeden element
-        assert len(visible_errors) == 1  # "czysty Python"
-        self.assertEqual(len(visible_errors), 1)  # metoda unittestowa (prawie to samo)
+        assert len(visible_errors) == 2  # "czysty Python"
+        self.assertEqual(len(visible_errors), 2)  # metoda unittestowa (prawie to samo)
         # !!!!!!!!!!!!!!!! Sprawdź, czy treść jest poprawna: "Nieprawidłowy adres e-mail"
         print("Tekst błędu na stronie: ", visible_errors[0].text)
         assert visible_errors[0].text == "Wpisz właściwy numer telefonu"
